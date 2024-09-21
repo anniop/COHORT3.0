@@ -1,3 +1,5 @@
+const { log } = require("console");
+
 function sum(n) {
     let ans = 0;
     for(let i = 0;i<= n;i++)
@@ -8,4 +10,4 @@ function sum(n) {
 }
 
 let result = sum(5);
-console.log(result);
+log(result);
