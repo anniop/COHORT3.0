@@ -1,7 +1,17 @@
 const fs = require("fs");
 
-const contents = fs.readFileSync("a.txt","utf-8");
-console.log(contents);
+function read(err, data) {
+    if(err) {
+        console.log("File Not Found !!")
+    } else {
+        console.log(data);
+    }
+    
+}
 
-const contents2 = fs.readFileSync("b.txt","utf-8");
-console.log(contents2);
+fs.readFile("a.txt","utf-8", read);
+
+fs.readFile("b.txt","utf-8",read);
+
+console.log("Done !!");
+
