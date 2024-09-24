@@ -23,3 +23,6 @@ const paint = rect.paint();
 console.log(area);
 console.log(paint);
 
+const now = new Date();
+console.log(now.getTime());
+
