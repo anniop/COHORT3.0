@@ -45,3 +45,19 @@ git clone https://github.com/anniop/COHORT3.0.git
 > **`Topics Covered:`** Node.js Installation, Linux Command Basic and Advanced(cd, pwd, ls, touch, mkdir, rm, mv, cat, cp, chmod, echo, head, tail, |, wc, grep, history), Bash Scripting, Vim Editor, How to solve Assignment, Solve Basic CSS Assignment, VSCode Landing Page, Callback Hell, setTimeout(), async/await, Promisified Version of readFile using async/await and Solved Some Problems
 
 </details>
+
+<details>
+<summary style="display: inline; font-size: 20px; font-weight: 700; cursor: pointer;" title="Click on me to Expand">Week 03 - DOM</summary>
+
+## 📚 [Week 03 - DOM](./Week%2003%20-%20DOM/)
+
+### 💻 [**3.1 - DOM Simple**](./Week%2003%20-%20DOM/3.1%20-%20DOM%20Simple/)
+
+> **`Topics Covered:`** What is DOM, Why DOM, Static HTML, Dynamic HTML, Fetching Elements(querySelector, querySelectorAll, getElementById, getElementByClassName, getElementsByClassName), Updating elements(Create Stop Watch), Deleting elements(removeChild), Adding elements(createElement, appendChild) and Build Simple Todo App.
+
+
+### 💻 [**3.2 - DOM Advance**](./Week%2003%20-%20DOM/3.2%20-%20DOM%20Advance/)
+
+> **`Topics Covered:`** Complex DOM Manipulation, State Derived Frontends, State Derived Rendering, Component, State variable, render, and Build Simple Todo App with Add, Update and Delete Functionality.
+
+</details>
