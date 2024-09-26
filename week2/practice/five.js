@@ -25,12 +25,10 @@ function PassWord() {
 // Promise Chaning.....
 
 console.log("Fetching UserName.......");
-let user = UserName();
-user.then((res) => {
+UserName().then((res) => {
     console.log(res);
     console.log("Fetching PassWord...");
-    let pass = PassWord();
-    pass.then((res) => {
+    PassWord().then((res) => {
         console.log(res);
     });
 });
