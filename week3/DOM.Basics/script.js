@@ -1,6 +1,7 @@
 let counter = 1;
 function callback() {
-    console.log(counter);
+    const el = document.querySelectorAll("h4")[1]
+    el.innerHTML = counter;
     counter  = counter + 1;
 }
 setInterval(callback,1000);
