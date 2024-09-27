@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width">
+	  <title>TODO</title>
+	  <style>
+		.todo {
+			background-color: yellowgreen;
+		}
+	  </style>
+	</head>
+	
+	<body>
+	  <h1 class = "todo" id = "tag">Todo list</h1>
+	  <h4 class = "todo" id = "todo1">1. Take class</h4>
+	  <h4 class = "todo" id = "todo2">2. Go out to eat</h4>
+	  <h4 class = "todo" id = "todo3">3. Go to Gym</h4>
+	  <div>
+	    <input type="text"></input>
+	    <button id="btn" onclick="addTodo()">Add Todo</button>
+	  </div>
+	  <script>
+		function addTodo() {
+		const inputl = document.querySelector("input");
+		const value = inputl.value;
+		console.log(value);
+
+		
+		}
+		
+	  </script>
+	</body>
+	
+</html>
+<!-- querySelector :- if we want only the first element the we use this.   
+ querySelectorAll :- if we want all of them then we use this.
+--> 
+ 
