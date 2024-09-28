@@ -6,12 +6,23 @@
     <button id = "button1" onclick="addtodo()">Add Todo</button>
     </body>
     <script>
+
+        function DeleteTodo(index) {
+
+        }
+
         function addtodo() {
             const add = document.querySelector("input");
             const value = add.value;
+            const spanEl = document.createElement("div");
+            const buttonEl = document.createElement("button");
+            spanEl.innerHTML = value;
+            buttonEl.innerHTML = "Delete";
 
-            const newDivEL = document.createElement("div");
-            newDivEL
+            const divEl = document.createElement("div");
+            divEl.appendChild(spanEl);
+            divEl.appendChild(buttonEl);
+            document.querySelector("body").appendChild(divEl);
         }
     </script>
 </html>
