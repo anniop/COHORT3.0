@@ -61,3 +61,29 @@ git clone https://github.com/anniop/COHORT3.0.git
 > **`Topics Covered:`** Complex DOM Manipulation, State Derived Frontends, State Derived Rendering, Component, State variable, render, and Build Simple Todo App with Add, Update and Delete Functionality.
 
 </details>
+
+## 📚 [Week 04 - Node.js and HTTP](./Week%2004%20-%20Node.js%20and%20HTTP/)
+
+### 💻 [**4.1 - Node.js, Bun and JS Runtimes**](./Week%2004%20-%20Node.js%20and%20HTTP/4.1%20-%20Node.js,%20Bun%20and%20JS%20Runtimes/)
+
+> **`Topics Covered:`** What is Node.js, V8 Engine, Bun JavaScript Runtime, Node.js Project, npm, chalk module, Internal and External Packages, `package.json` & `package-lock.json` file & Solved Some Problems.
+
+### 💻 [**4.2 - HTTP Servers**](./Week%2004%20-%20Node.js%20and%20HTTP/4.2%20-%20HTTP%20Servers/)
+
+> **`Topics Covered:`** HTTP Protocols, Request Response Model, Ports, Methods (GET, POST, PUT, DELETE), Response, Status Code, (2xx, 3xx, 4xx, 5xx), Body, Routes, Headers, Clients (Browser & Postman) and Created our First HTTP Server using Express.
+
+</details>
+
+<details>
+<summary style="display: inline; font-size: 20px; font-weight: 700; cursor: pointer;" title="Click on me to Expand">Week 04 - Offline Videos
+
+</summary>
+
+## 📚 [Week 04 - Offline Videos](./Week%2004%20-%20Offline%20Videos/)
+
+> **`Topics Covered:`** What and Why express?, Create HTTP Server using Express, Request Methods(GET, POST, PUT, DELETE) Status Code(200, 404, 500, 411, 403), Create Hospital Game Backend. What and Why is Middleware? and Solved Some Problems.
+
+</details>
+
+<details>
+<summary style="display: inline; font-size: 20px; font-weight: 700; cursor: pointer;" title="Click on me to Expand">Week 05</summary>
