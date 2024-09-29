@@ -62,6 +62,9 @@ git clone https://github.com/anniop/COHORT3.0.git
 
 </details>
 
+<details>
+<summary style="display: inline; font-size: 20px; font-weight: 800; cursor: pointer;" title="Click on me to Expand">Week 04 - Node.js and HTTP</summary>
+
 ## 📚 [Week 04 - Node.js and HTTP](./Week%2004%20-%20Node.js%20and%20HTTP/)
 
 ### 💻 [**4.1 - Node.js, Bun and JS Runtimes**](./Week%2004%20-%20Node.js%20and%20HTTP/4.1%20-%20Node.js,%20Bun%20and%20JS%20Runtimes/)
@@ -84,6 +87,3 @@ git clone https://github.com/anniop/COHORT3.0.git
 > **`Topics Covered:`** What and Why express?, Create HTTP Server using Express, Request Methods(GET, POST, PUT, DELETE) Status Code(200, 404, 500, 411, 403), Create Hospital Game Backend. What and Why is Middleware? and Solved Some Problems.
 
 </details>
-
-<details>
-<summary style="display: inline; font-size: 20px; font-weight: 700; cursor: pointer;" title="Click on me to Expand">Week 05</summary>
