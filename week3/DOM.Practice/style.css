@@ -1,0 +1,28 @@
+/* 
+"#" represents the id of a tag
+"." represents the class of a tag
+*/
+
+#heading1 {
+    color: blue;
+    background-color: gold;
+}
+
+#heading2 {
+    color: teal;
+    background-color: black;
+}
+
+body {
+    background-color: blueviolet;
+}
+
+button {
+    background-color: aqua;
+    color: brown;
+}
+
+.anniket {
+    background-color: teal;
+    color: white;
+}
