@@ -1,0 +1,10 @@
+button {
+  background-color : red;
+}
+ div {
+  height: 100px;
+  width: 100px;
+  background-color: dodgerblue;
+  color: white;
+  border: 1px solid black;
+ }
