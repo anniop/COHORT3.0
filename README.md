@@ -87,3 +87,25 @@ git clone https://github.com/anniop/COHORT3.0.git
 > **`Topics Covered:`** What and Why express?, Create HTTP Server using Express, Request Methods(GET, POST, PUT, DELETE) Status Code(200, 404, 500, 411, 403), Create Hospital Game Backend. What and Why is Middleware? and Solved Some Problems.
 
 </details>
+
+# 📚 [Week 05](./Week%2005/)
+
+### 💻 [**5.1 - Headers, Query params and Express**](./Week%2005/5.1%20-%20Headers,%20Query%20params%20and%20Express/)
+
+> **`Topics Covered:`** Recap Last Week(Domain name/IP, Port, Methods, Plaintext vs JSON vs HTML response, Status Codes, Body, Routes, Express), Headers, Fetch API in the Browser, Axios, Query params, Creating our own HTTP Server using Express.
+
+### 💻 [**5.2 - Middlewares and Cors**](./Week%2005//5.2%20-%20Middlewares%20and%20Cors/)
+
+> **`Topics Covered:`** What and Why Middlewares and How it works?, Route specific middlewares, Inline and Global Middlewares, Commonly used middlewares(`express.json()`, `bodyParser.json()`), `CORS` - Cross origin resource sharing, Why CORS? and Solved Some Problems.
+
+</details>
+
+<details>
+<summary style="display: inline; font-size: 20px; font-weight: 700; cursor: pointer;" title="Click on me to Expand">Week 05 - Offline Videos</summary>
+
+## 📚 [Week 05 - Offline Videos](./Week%2005%20-%20Offline%20Videos/)
+
+> **`Topics Covered:`** Git & GitHub in details, Arrow Functions, map(), reduce(), fetch API, Axios Library, GET, POST, PUT, DELETE request and solved som problems.
+
+</details>
+
