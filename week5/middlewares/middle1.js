@@ -1,41 +1,35 @@
 const express = require("express");
 const app = express();
 
-app.get("/add", function (req, res) {
+let requestCounter = 0;
+
+function requestIncreaser(req, res, next) {
+  requestCounter = requestCounter + 1;
+  req.name = "Jay Ganesh";
+  console.log(`Number of requests on the server are ${requestCounter}`);
+  next();
+}
+
+function realsum(req, res) {
   let a = parseInt(req.query.a);
   let b = parseInt(req.query.b);
-
+  console.log(req.name);
   res.json({
     ans: a + b
   })
-});
+}
 
-app.get("/substract", function (req, res) {
-  let a = parseInt(req.query.a);
-  let b = parseInt(req.query.b);
-
-  res.json({
-    ans: a - b
-  })
-});
-
-app.get("/multiply", function (req, res) {
+function realmultiply(req, res) {
   let a = req.query.a;
   let b = req.query.b;
-
+  console.log(req.name);
   res.json({
     ans: a * b
   })
-});
+}
 
-app.get("/division", function (req, res) {
-  let a = req.query.a;
-  let b = req.query.b;
+app.get("/add", requestIncreaser, realsum);
 
-  res.json({
-    ans: a / b
-  })
-});
-
+app.get("/multiply", requestIncreaser, realmultiply);
 
 app.listen(3000);
