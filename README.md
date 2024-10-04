@@ -112,3 +112,9 @@ git clone https://github.com/anniop/COHORT3.0.git
 
 </details>
 
+# 🔗 **Let's Connect** 🤝
+
+[![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](https://x.com/Ann_i0p)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](www.linkedin.com/in/aniket-mogal-9b9b4a1b9)
+
+
