@@ -88,6 +88,9 @@ git clone https://github.com/anniop/COHORT3.0.git
 
 </details>
 
+<details>
+<summary style="display: inline; font-size: 20px; font-weight: 700; cursor: pointer;" title="Click on me to Expand">Week 05</summary>
+
 # 📚 [Week 05](./Week%2005/)
 
 ### 💻 [**5.1 - Headers, Query params and Express**](./Week%2005/5.1%20-%20Headers,%20Query%20params%20and%20Express/)
