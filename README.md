@@ -112,6 +112,32 @@ git clone https://github.com/anniop/COHORT3.0.git
 
 </details>
 
+<details>
+<summary style="display: inline; font-size: 20px; font-weight: 700; cursor: pointer;" title="Click on me to Expand">Week 06</summary>
+
+## 📚 [Week 06](./Week%2006/)
+
+### 💻 [**6.1 - HTTP Deep Dive**](./Week%2006/6.1%20-%20HTTP%20Deep%20Dive/)
+
+> **`Topics Covered:`** What is authentication?, Auth workflow, Create an express app, Tokens and JWT (JSON Web tokens) based authentication, Tokens vs JWTs, Authorization header.
+
+### 💻 [**6.2 - Auth and Connecting FE to BE**](./Week%2006/6.2%20-%20Auth%20and%20Connecting%20FE%20to%20BE/)
+
+> **`Topics Covered:`** Revision of Week 6.1, Auth Middleware, logger request, LocalStorage, Connecting Frontend with Backend for Auth App...
+
+
+</details>
+
+<details>
+<summary style="display: inline; font-size: 20px; font-weight: 700; cursor: pointer;" title="Click on me to Expand">Week 06 - Offline Videos</summary>
+
+## 📚 [Week 06 - Offline Videos](./Week%2006%20-%20Offline%20Videos/)
+
+> **`Topics Covered:`** JWT, Auth, tokens, sign(), decode(), verify() method Error Handling using try/catch block, Input Validation using Zod, MongoDB Installation and Solved Some Problems.
+
+
+</details>
+
 # 🔗 **Let's Connect** 🤝
 
 [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](https://x.com/Ann_i0p)
