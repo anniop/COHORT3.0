@@ -1,4 +1,3 @@
-// Import the express library
 const express = require("express");
 
 // Import the jsonwebtoken library
