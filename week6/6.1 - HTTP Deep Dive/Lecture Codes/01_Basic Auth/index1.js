@@ -62,7 +62,7 @@ app.get("/me", function (req, res) {
   // This line of code is used to convert the jwt token again to the username for verification.
   const decodedinformation = jwt.verify(token, JWT_SECRET);
   const username = decodedinformation.username
- 
+
   let foundUser = null;
 
   for (let i = 0; i < users.length; i++) {
