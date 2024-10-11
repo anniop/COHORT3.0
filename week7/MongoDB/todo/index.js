@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const { UserModel, TodoModel } = require("./db");
 const app = express();
 
-mongoose.connect("mongodb+srv://Anni0p:Anniop12345@cluster0.dh63v.mongodb.net/todo-app");
+mongoose.connect("");
 
 app.use(express.json());
 
