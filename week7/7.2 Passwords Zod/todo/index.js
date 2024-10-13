@@ -5,12 +5,23 @@ const express = require("express");
 const mongoose = require("mongoose");
 const { UserModel, TodoModel } = require("./db");
 const app = express();
+const { z } = require("zod")
 
 mongoose.connect("mongodb+srv://Anni0p:Anniop12345@cluster0.dh63v.mongodb.net/todo-app");
 
 app.use(express.json());
 
 app.post("/signup", async function (req, res) {
+
+  const requiredBody = z.object({
+    email: z.string(),
+    name: z.string,
+    password: z.string()
+  });
+
+  // const parsedData = requiredBody.parse(req.body);
+  const parsedDataWithSuccess = requiredBody.safeparse(req.body);
+
   const email = req.body.email;
   const password = req.body.password;
   const name = req.body.name;
