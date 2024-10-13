@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 const { UserModel, TodoModel } = require("./db");
 const app = express();
 
-mongoose.connect("mongodb+srv://Anni0p:Anniop12345@cluster0.dh63v.mongodb.net/");
+mongoose.connect("mongodb+srv://Anni0p:Anniop12345@cluster0.dh63v.mongodb.net/todo-app");
 
 app.use(express.json());
 
@@ -33,14 +33,21 @@ app.post("/signin", async function (req, res) {
   const email = req.body.email;
   const password = req.body.password;
 
+
   const user = await UserModel.findOne({
-    email: email,
-    password: password
+    email: email
   });
 
-  console.log(user);
+  if (!user) {
+    res.status(403).json({
+      message: "User Does Not Exist"
+    });
+  }
 
-  if (user) {
+  const passwordMatch = await bcrypt.compare(password, user.password);
+
+
+  if (passwordMatch) {
     const token = jwt.sign({
       id: user._id
     }, JWT_SECRET);
@@ -48,7 +55,7 @@ app.post("/signin", async function (req, res) {
       token: token
     })
   } else {
-    res.status(403)({
+    res.status(403).json({
       message: "Incorrect Credentials"
     });
   }
