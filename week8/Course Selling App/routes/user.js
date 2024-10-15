@@ -3,7 +3,7 @@ const { z } = require("zod");
 const { userModel } = require("../db");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const JWT_USER_PASSWORD = "jayganeshjayshriram"
+const { JWT_USER_PASSWORD } = require("../config");
 const Router = express.Router;
 
 

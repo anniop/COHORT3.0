@@ -2,8 +2,10 @@ const express = require("express");
 const { z } = require("zod");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
-const JWT_ADMIN_PASSWORD = "jayganeshharharmahadev"
+const { adminMiddleware } = require("../middlewares/admin");
+const { JWT_ADMIN_PASSWORD } = require("../config");
 const { adminModel } = require("../db");
+const { courseModel } = require("../db");
 
 const Router = express.Router;
 
@@ -73,21 +75,21 @@ adminRouter.post("/login", async function (req, res) {
 
   const { email, password } = req.body;
 
-  const user = await adminModel.findOne({
+  const admin = await adminModel.findOne({
     email: email
   });
 
-  if (!user) {
+  if (!admin) {
     res.status(403).json({
       message: "Incorrect Credentials"
     });
   }
 
-  const passwordMatch = await bcrypt.compare(password, user.password);
+  const passwordMatch = await bcrypt.compare(password, admin.password);
 
   if (password) {
     const token = jwt.sign({
-      id: user._id
+      id: admin._id
     }, JWT_ADMIN_PASSWORD);
     res.status(200).json({
       token: token
@@ -100,16 +102,62 @@ adminRouter.post("/login", async function (req, res) {
 
 });
 
-adminRouter.post("/course", function (req, res) {
+adminRouter.post("/course", adminMiddleware, async function (req, res) {
+
+  const adminId = req.userId;
+  const { title, description, imageURL, price } = req.body;
+
+  const course = await courseModel.create({
+    title: title,
+    description: description,
+    imageURL: imageURL,
+    price: price,
+    creatorId: adminId
+  });
+
+  res.json({
+    message: "Course Created",
+    courseId: course._id
+  })
+
 
 });
 
-adminRouter.put("/course", function (req, res) {
+adminRouter.put("/course", adminMiddleware, async function (req, res) {
+  const adminId = req.userId;
+  const { title, description, imageURL, price, courseId } = req.body;
+
+  const course = await courseModel.updateOne({
+    _id: courseId,
+    creatorId: adminId
+  }, {
+    title: title,
+    description: description,
+    imageURL: imageURL,
+    price: price,
+  });
+
+  res.json({
+    message: "Course Updated",
+    courseId: course._id
+  })
+
 
 });
 
 
-adminRouter.get("/course/bulk", function (req, res) {
+adminRouter.get("/course/bulk", adminMiddleware, async function (req, res) {
+  const adminId = req.userId;
+
+  const courses = await courseModel.find({
+    creatorId: adminId
+  });
+
+  res.json({
+    message: "Course Updated",
+    courses
+  });
+
 
 });
 
