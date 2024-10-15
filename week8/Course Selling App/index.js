@@ -10,6 +10,7 @@ const app = express();
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/admin", adminRouter);
 app.use("/api/v1/course", courseRouter);
+app.use(express.json());
 
 async function main() {
   await mongoose.connect("mongodb+srv://Anni0p:Anniop12345@cluster0.dh63v.mongodb.net/coursera-app");

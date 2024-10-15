@@ -1,12 +1,16 @@
 const express = require("express");
 const { z } = require("zod");
-const userModel = require("../db");
+const { userModel } = require("../db");
 const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+const JWT_USER_PASSWORD = "jayganeshjayshriram"
 const Router = express.Router;
+
 
 // const { Router } = require("express");
 
 const userRouter = Router();
+userRouter.use(express.json());
 
 userRouter.post("/signup", async function (req, res) {
 
@@ -24,6 +28,7 @@ userRouter.post("/signup", async function (req, res) {
       message: "Incorrect Format"
     });
   }
+  const { email, password, firstName, lastName } = parsedWithSuccess.data;
   try {
     const hashedPassword = await bcrypt.hash(password, 5);
 
@@ -40,13 +45,53 @@ userRouter.post("/signup", async function (req, res) {
     console.log(error);
     res.status(400).json({
       message: "Internal Server Error",
-      error: message.error
+      error: error.message
     });
   }
 
 });
 
-userRouter.post("/login", function (req, res) {
+userRouter.post("/login", async function (req, res) {
+
+  const requireBody = z.object({
+    email: z.string().email(),
+    password: z.string().min(6),
+  });
+
+  const parseDataWithSuccess = requireBody.safeParse(req.body);
+
+  if (!parseDataWithSuccess.success) {
+    return res.json({
+      message: "Incorrect data format",
+      error: parseDataWithSuccess.error,
+    });
+  }
+
+  const { email, password } = req.body;
+
+  const user = await userModel.findOne({
+    email: email,
+  });
+
+  if (!user) {
+    return res.status(403).json({
+      message: "Incorrect Credentials!",
+    });
+  }
+
+  const passwordMatch = await bcrypt.compare(password, user.password);
+
+  if (passwordMatch) {
+    const token = jwt.sign({ id: user._id }, JWT_USER_PASSWORD);
+
+    res.status(200).json({
+      token: token,
+    });
+  } else {
+    res.status(403).json({
+      message: "Invalid Credentials!",
+    });
+  }
 });
 
 userRouter.get("/purchases", function (req, res) {
