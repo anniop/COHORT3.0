@@ -138,6 +138,53 @@ git clone https://github.com/anniop/COHORT3.0.git
 
 </details>
 
+
+<details>
+<summary style="display: inline; font-size: 20px; font-weight: 700; cursor: pointer;" title="Click on me to Expand">Week 07 - MongoDB</summary>
+
+## 📚 [Week 07 - MongoDB](./Week%2007%20-%20MongoDB/)
+
+### 💻 [**7.1 - MongoDB**](./Week%2007%20-%20MongoDB/7.1%20-%20MongoDB/)
+
+> **`Topics Covered:`** What is authentication?, Auth workflow, Create an express app, Tokens and JWT (JSON Web tokens) based authentication, Tokens vs JWTs, Authorization header.
+
+
+### 💻 [**7.2 - Passwords, Zod**](./Week%2007%20-%20MongoDB/7.2%20-%20Passwords,%20Zod/)
+
+> **`Topics Covered:`** Recap of Week 7.1, What is Hashing and Why?, Salting, bcrypt algorithm, Error Handling using try-catch, Input Validation using Zod, ans solved signin and signup endpoints.
+
+
+</details>
+
+<details>
+<summary style="display: inline; font-size: 20px; font-weight: 700; cursor: pointer;" title="Click on me to Expand">Week 08 - Course Selling App</summary>
+
+## 📚 [Week 08 - Course Selling App](./Week%2008%20-%20Course%20Selling%20App/)
+
+### 💻 [**8.1 - Backend of Course Selling App**](./Week%2008%20-%20Course%20Selling%20App/8.1%20-%20Backend%20of%20Course%20Selling%20App/)
+
+> **`Topics Covered:`** Created some backend of a `Course Selling App`, project file structure & explore `p5.js-web-editor` github repository.
+
+
+### 💻 [**8.2 - Backend of Course Selling App - Part 2**](./Week%2008%20-%20Course%20Selling%20App/8.2%20-%20Backend%20of%20Course%20Selling%20App%20-%20Part%202/)
+
+> **`Topics Covered:`** Created complete backend of a `Course Selling App`.
+
+
+</details>
+
+<details>
+<summary style="display: inline; font-size: 20px; font-weight: 700; cursor: pointer;" title="Click on me to Expand">Week 08 - Offline Videos</summary>
+
+## 📚 [Week 08 - Offline Videos](./Week%2008%20-%20Offline%20Videos/)
+
+### 💻 [**Mongo Deep Dive**](/Week%2008%20-%20Offline%20Videos/Mongo%20Deep%20Dive/)
+
+> **`Topics Covered:`** Whay and Why databases?, What is MongoDB?, Some good examples, and Created some backend of a `Course Selling Website`.
+
+
+</details>
+
 # 🔗 **Let's Connect** 🤝
 
 [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](https://x.com/Ann_i0p)
