@@ -2,58 +2,38 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { PostComponent } from './Post'
+
 
 function App() {
+  const [posts, setPosts] = useState([]);
+
+  const postComponent = posts.map(post => <PostComponent
+    name={post.name}
+    subtitle={post.subtitle}
+    time={post.time}
+    image={post.image}
+    description={post.description}
+  />)
+  function addPost() {
+    setPosts([...posts, {
+      name: "Aniket",
+      subtitle: "1000 Followers",
+      time: "2m Ago",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKUvy77ds0v5v041xEWVYxwGSVaCtwM2D3gg&s",
+      description: "This is a Demo App for Learning React Application"
+    }])
+  }
 
   return (
-    <div style={{ backgroundColor: "#dfe6e9", height: "100vh" }}>
+    <div style={{ background: "#dfe6e9", height: "100vh" }}>
+      <button onClick={addPost}> Add Post</button>
       <div style={{ display: "flex", justifyContent: "center" }}>
         <div>
-          <div>
-            <Postcomponent />
-            <br />
-          </div>
-          <div>
-            <Postcomponent />
-            <br />
-          </div>
-          <div>
-            <Postcomponent />
-            < br />
-          </div>
+          {postComponent}
         </div>
       </div>
-
-
     </div>
   )
 }
-
-const style = { width: 200, backgroundColor: "white", borderRadius: 10, borderColor: "gray", borderWidth: 1 }
-
-function Postcomponent() {
-  return <div style={style}>
-    <div style={{ display: "flex" }}>
-      <img src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgv-9IviwCaDDguYAxucbkz3VZaILxreUB7w&s"}
-        style={{
-          width: 30,
-          height: 30,
-          borderRadius: 20
-        }} />
-      <div style={{ fontSize: 14, marginLeft: 20 }}>
-        <b>
-          100xDevs
-        </b>
-        <div> 23,777 Followers </div>
-        <div> 12m </div>
-      </div>
-    </div>
-    <div style={{ fontSize: 17 }}>
-      Jay Ganesh Jay Ganesh
-    </div>
-
-  </div>
-
-}
-
 export default App
