@@ -6,34 +6,20 @@ import { PostComponent } from './Post'
 
 
 function App() {
-  const [posts, setPosts] = useState([]);
 
-  const postComponent = posts.map(post => <PostComponent
-    name={post.name}
-    subtitle={post.subtitle}
-    time={post.time}
-    image={post.image}
-    description={post.description}
-  />)
-  function addPost() {
-    setPosts([...posts, {
-      name: "Aniket",
-      subtitle: "1000 Followers",
-      time: "2m Ago",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKUvy77ds0v5v041xEWVYxwGSVaCtwM2D3gg&s",
-      description: "This is a Demo App for Learning React Application"
-    }])
+  const [count, setCount] = useState(1);
+
+  function increaseCount() {
+    setCount(count + 1);
   }
-
-  return (
-    <div style={{ background: "#dfe6e9", height: "100vh" }}>
-      <button onClick={addPost}> Add Post</button>
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <div>
-          {postComponent}
-        </div>
+  return <div>
+    <div style={{ display: "flex" }}>
+      <div style={{ background: "red", borderRadius: 50, width: 20, height: 25, paddingLeft: 10, paddingTop: 5, justifyContent: "center" }}>
+        {count}
       </div>
     </div>
-  )
+    <img style={{ cursor: "pointer" }} src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcXrDYIdCrdQoXJZCETkOEUsuKoAo-DfJ14A&s"} width={40} />
+    <button onClick={increaseCount}> Increase The Count</button>
+  </div>
 }
 export default App
