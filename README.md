@@ -185,6 +185,54 @@ git clone https://github.com/anniop/COHORT3.0.git
 
 </details>
 
+<details>
+<summary style="display: inline; font-size: 20px; font-weight: 700; cursor: pointer;" title="Click on me to Expand">Week 09 - React</summary>
+
+## 📚 [Week 09 - React](./Week%2009%20-%20React/)
+
+### 💻 [**9.1 - React Basics**](./Week%2009%20-%20React/9.1%20-%20React%20Basics/)
+
+> **`Topics Covered:`** What and Why `React`, Components, State, Re-rendering, What is JSX?, useState, Create `Counter-App` using 3 diffenrnt way 1. DOM, 2. state and component and 3. React, Create Simple Todo App using React.
+
+
+
+### 💻 [**9.2 - React useState**](./Week%2009%20-%20React/9.2%20-%20React%20useState/)
+
+> **`Topics Covered:`** useState and useEffect Hooks, Conditional Rendering, Props, useState Cleanup, Dependency Array, Mounting, Unmounting, Rendering, Create Countdown App...
+
+
+
+### 💻 [**9.3 - React From Basic Part 1 (Recorded)**](./Week%2009%20-%20React/9.3%20-%20React%20From%20Basic%20Part%201%20(Recorded)/)
+
+> **`Topics Covered:`** Create React project locally, Components, Hooks(useState, useEffect), dependency array, cleanup functions, fetch data from API, re-render, props, conditional-rendering...
+
+
+
+> **`Topics Covered:`** children-props, lists and keys, inline styling, class-based vs functional component, lifecycle methods, error boundary, react fragment and create some small app...
+
+</details>
+
+<details>
+<summary style="display: inline; font-size: 20px; font-weight: 700; cursor: pointer;" title="Click on me to Expand">Week 10</summary>
+
+## 📚 [Week 10](./Week%2010/)
+
+### 💻 [**10.1 - React Part 2 (SPAs, Routing)**](./Week%2010/10.1%20-%20React%20Part%202%20(SPAs,%20Routing)/)
+
+> **`Topics Covered:`** Single Page Application, Routing(react-router-dom), Layout, useRef Hook, why we need useRef hook, and Create a Clock with start and stop functionality using useRef.
+
+
+
+### 💻 [**10.2 - React Part 3 (Context API, Rolling Up The State)**](./Week%2010/10.2%20-%20React%20Part%203%20(Context%20API,%20Rolling%20Up%20The%20State)/)
+
+> **`Topics Covered:`** Rolling-up the State, unoptimal re-renders, Prop-Drilling, Context API, Recoils state management library...
+
+
+</details>
+
+<details>
+<summary style="display: inline; font-size: 20px; font-weight: 700; cursor: pointer;" title="Click on me to Expand">Week 11</summary>
+
 # 🔗 **Let's Connect** 🤝
 
 [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](https://x.com/Ann_i0p)
