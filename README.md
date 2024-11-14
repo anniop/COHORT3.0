@@ -232,6 +232,20 @@ git clone https://github.com/anniop/COHORT3.0.git
 
 <details>
 <summary style="display: inline; font-size: 20px; font-weight: 700; cursor: pointer;" title="Click on me to Expand">Week 11</summary>
+### 💻 [**11.1 - Custom Hooks**](./Week%2011/11.1%20-%20Custom%20Hooks/)
+
+> **`Topics Covered:`** Custom Hooks - useCounter, useFetch, useFetch with re-fetching, usePrev, useDebounce...
+
+### 💻 [**11.2 - Recoil**](./Week%2011/11.2%20-%20Recoil/)
+
+> **`Topics Covered:`** Context API, Recoil (State Management Library), Atom & Selectors...
+
+
+### 💻 [**11.3 - Recoil Deep Dive (Offline)**](./Week%2011/11.3%20-%20Recoil%20Deep%20Dive%20(Offline)/)
+
+> **`Topics Covered:`** Recoil (State Management Library), Atom & Selectors...
+
+</details>
 
 # 🔗 **Let's Connect** 🤝
 
