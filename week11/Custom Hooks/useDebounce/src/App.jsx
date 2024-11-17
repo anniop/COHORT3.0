@@ -1,27 +1,38 @@
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './App.css'
 
-function useDebounce(originalFn) {
-  const currentClock = useRef();
+const useDebounce = (value, delay) => {
+  const [debouncedValue, setDebouncedValue] = useState(value);
 
-  const fn = () => {
-    clearTimeout(currentClock.current);
-    currentClock.current = setTimeout(originalFn, 200);
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedValue(value);
+    }, delay);
 
-  }
-  return fn;
-}
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [value, delay]);
+
+  return debouncedValue;
+};
 
 function App() {
 
-  function sendDataToBackend() {
-    fetch("api.amazon.com/search/")
+  const [inputVal, setInputVal] = useState("");
+
+  const debouncedValue = useDebounce(inputVal, 200);
+
+  function change(e) {
+    setInputVal(e.target.value);
   }
 
-  const debouncedFn = useDebounce(sendDataToBackend);
+  useEffect(() => {
+    console.log("Jay Ganesh")
+  }, [debouncedValue])
 
   return <div>
-    <input type='text' onChange={debouncedFn}></input>
+    <input type='text' onChange={change}></input>
   </div>
 }
 
