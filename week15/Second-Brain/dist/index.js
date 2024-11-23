@@ -83,8 +83,17 @@ app.get("/api/v1/content", middleware_1.userMiddleware, (req, res) => __awaiter(
         content
     });
 }));
-app.delete("/api/v1/content", (req, res) => {
-});
+app.delete("/api/v1/content", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const contentId = req.body.contentId;
+    yield db_1.ContentModel.deleteMany({
+        contentId,
+        //@ts-ignore
+        userId: req.userId
+    });
+    res.json({
+        message: "Deleted"
+    });
+}));
 app.post("/api/v1/brain/content/share", (req, res) => {
 });
 app.post("/api/v1/brain/brain/shareLink", (req, res) => {
