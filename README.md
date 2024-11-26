@@ -252,6 +252,59 @@ git clone https://github.com/anniop/COHORT3.0.git
 
 </details>
 
+
+<details>
+<summary style="display: inline; font-size: 20px; font-weight: 700; cursor: pointer;" title="Click on me to Expand">Week 12 - Ui/Ux by Keshav</summary>
+
+## 📚 [Week 12 - Ui/Ux by Keshav](./Week%2012%20-%20Ui-Ux%20by%20Keshav/)
+
+### 💻 [**12.1 - Ui/Ux Primitives by Keshav - Part 1**](./Week%2012%20-%20Ui-Ux%20by%20Keshav/12.1%20-%20Ui-Ux%20Primitives%20by%20Keshav%20-%20Part%201/)
+
+> **`Topics Covered:`** Typography(Fonts, Font Weight, Font Size, Leading, Tracking), Colors(RGB, HSL, ...), What and Why UI/UX, User Interface (UI), User Experience (UX), UI/Frontend Designing...
+
+
+### 💻 [**12.2 - Ui/Ux Primitives by Keshav - Part 2**](./Week%2012%20-%20Ui-Ux%20by%20Keshav/12.2%20-%20Ui-Ux%20Primitives%20by%20Keshav%20-%20Part%202/)
+
+> **`Topics Covered:`** Reacp Week 12.1, UI/Frontend, Branding, Create, Vimal Pan Masala(Bolo Zubaan Kesari) Website...
+
+
+</details>
+
+<details>
+<summary style="display: inline; font-size: 20px; font-weight: 700; cursor: pointer;" title="Click on me to Expand">Week 13 - Tailwind</summary>
+
+## 📚 [Week 13 - Tailwind](./Week%2013%20-%20Tailwind/)
+
+### 💻 [**13.1 - Tailwind Part 1**](./Week%2013%20-%20Tailwind/13.1%20-%20Tailwind%20Part%201/)
+
+> **`Topics Covered:`** Learn About `Tailwind CSS` with Vite, What and Why Tailwind CSS, Colors, background-colors, fonts, text, border, radius, flexbox, grid and build some projects using react and tailwind...
+
+
+### 💻 [**13.2 - Tailwind Part 2**](./Week%2013%20-%20Tailwind/13.2%20-%20Tailwind%20Part%202/)
+
+> **`Topics Covered:`** Learn about animation in tailwind, Create Sidebar and Projects...
+
+
+</details>
+
+<details>
+<summary style="display: inline; font-size: 20px; font-weight: 700; cursor: pointer;" title="Click on me to Expand">Week 14 - TypeScript</summary>
+
+## 📚 [Week 14 - TypeScript](./Week%2014%20-%20TypeScript/)
+
+### 💻 [**14.1 - TypeScript Part 1**](./Week%2014%20-%20TypeScript/14.1%20-%20TypeScript%20Part%201/)
+
+> **`Topics Covered:`** Learn About What and Why `TypeScript`, JavaScript vs TypeScript, TypeScript Compiler, `tsconfig.json` file, Basic Data Types, number, string, boolean, null, undefined, Objects, let, const, Functions, Interface, Types...
+
+
+### 💻 [**14.2 - TypeScript Part 2**](./Week%2014%20-%20TypeScript/14.2%20-%20TypeScript%20Part%202/)
+
+> **`Topics Covered:`** Learn about difference between Types and Interface, Arrays, Objects, Union, Intersection, Class, Abstract Class, Inheritance, extends vs implements, solve some problems 
+
+
+</details>
+
+
 # 🔗 **Let's Connect** 🤝
 
 [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](https://x.com/Ann_i0p)
