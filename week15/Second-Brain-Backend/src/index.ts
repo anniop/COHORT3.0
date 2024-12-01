@@ -4,12 +4,14 @@ import jwt from "jsonwebtoken";
 import { ContentModel, LinkModel, UserModel } from "./db";
 import { JWT_PASSWORD } from "./config";
 import { userMiddleware } from "./middleware";
+import cors from "cors";
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 app.post("/api/v1/signup", async (req, res) => {
-  // TODO: zod validation , hash the password
+  // TODO zod validation , hash the password
   const username = req.body.username;
   const password = req.body.password;
 
@@ -164,3 +166,4 @@ app.get("/api/v1/brain/:shareLink", async (req, res) => {
 })
 
 app.listen(3000);
+

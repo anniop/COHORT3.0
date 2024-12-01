@@ -7,11 +7,16 @@ export default {
   theme: {
     extend: {
       colors: {
+        gray: {
+          100: "#eeeeef",
+          200: "#e6e9ed",
+          600: "#95989c"
+        },
         purple: {
-          300: "#e0dbfe",
-          400: "#7859b5",
-          500: "#3e38a7",
-          600: "#6200df"
+          200: "#d9ddee", // Background of Secondary Button
+          500: "#9492db", // Secondary button text
+          600: "#7164c0"  // Primary Button Background
+
         }
       }
     },
