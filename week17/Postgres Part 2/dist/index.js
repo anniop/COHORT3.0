@@ -27,16 +27,15 @@ app.post("/signup", (req, res) => __awaiter(void 0, void 0, void 0, function* ()
     const street = req.body.street;
     const pincode = req.body.pincode;
     try {
-        yield pgClient.query('BEGIN');
+        yield pgClient.query('BEGIN'); // starting a transaction
         const userQuery = `insert into users(email, username, password) values($1,$2,$3) RETURNING id`;
         const userValues = [username, email, password];
         const response = yield pgClient.query(userQuery, userValues);
-        console.log(response);
         const userId = response.rows[0].id;
         const addressQuery = `insert into addresses(city, country,street,pincode, user_id) values ($1,$2,$3,$4,$5)`;
         const addressValues = [city, country, street, pincode, userId];
         yield pgClient.query(addressQuery, addressValues);
-        yield pgClient.query('COMMIT');
+        yield pgClient.query('COMMIT'); // transaction completed
         console.log("Transaction done SuccessFully");
         res.json({
             message: "Signin SuccessFull"
