@@ -1,0 +1,137 @@
+1. Problem Statement
+2. Installation of Docker CLI and Desktop
+3. Understanding Images v/s Containers
+4. Running Ubuntu Image in Docker
+5. Multiple Containers
+6. Port Mappings
+7. Environment Variables
+8. Dockerization of Node.js Application
+9. Docker Compose
+    a. Services
+    b. Port Mapping
+    c. Env Variables
+10. Docker Networking
+    a. Bridge
+    b. Host
+    c. IPvLan
+    d. MacvLan
+    e. None
+11. Volume Mounting
+12. Docker Multi-stage Build
+
+hub.docker.com is the website from where docker pulls all the requirements that you want to run in local Environment
+cltr + d to exit a Container
+
+Command:-
+docker run -it Ubuntu 
+the "it" stands for interactive tty
+if Ubuntu is available it will run it and if not then it will download it from hub.docker.com
+
+docker container ls 
+this command list all the containers which are running.
+and if we add -a to it then it will show all the containers running and dead all.
+
+docker container start <container name>
+to start the container.
+
+docker container exec <container name> <command>
+this will execute the command on the container
+
+docker container exec -it <container name> bash 
+to get the shell access of the container
+
+docker images 
+will list all the images in the docker server.
+
+docker run -it -p 1025:1025 mailhog/mailhog
+this command is use to expose the port to our local machine and by the help of that the server can be acccessed locally
+this is called as port exposing.
+and -p 1025:1025 the left side port is our port number and the right side port is image port we can change the left side 
+port number as per our need.
+
+to Dockerize a file we need to add a file to the folder the name of the file should be "Dockerfile" without any extention.
+
+after writing the script into the Dockerfile then we have to build it.
+so for that the command is:-
+docker build -t <file name> .
+the . indicates that i have to build the container in the current directory itself.
+
+docker compose is use for managing Multiple containers together for that we have to create a file with name docker-compose.yml
+which will contain all the infromation means it contains all the configurations of the image all the necessary services requried 
+for the image to run.
+command is:-
+docker compose up 
+this command is to activate the server
+docker compose down 
+this command is used to turn off the services 
+
+docker compose up -d 
+-d is for detatched mode which means run the code in background.
+
+
+systemctl --user start docker-desktop
+command to start the docker desktop
+
+
+Day 2 : Docker Networking
+1. Dokcer Networking.
+    a. Bridge
+    b. Host
+2. Volume Mounting
+3. Efficient Caching in Layers.
+4. Docker Multi-stage Build.
+
+Docker networking.
+	Bridge:- The default networking driver. if you dont specify a driver, this is the type of network you are creating.Bridge networks are commonly
+		 used when your application runs in a container that needs to communicate with other containers on the same host.
+	Host:-
+		Remove network isolation between the container and the docker host, and use the host's networking directly.
+
+Command :-
+	"docker network inspect bridge" is the command by which is the command by which we can see which container is using this driver if any.
+	"docker network ls" using this command we can see what network drivers are available on your device.
+	"docker run -it --network=host busybox" this command is used to explictly assign the network driver to the container by default it is bridge.
+	if we give the network driver as host then we dont have to map the post but if we use bridge adapter then we have to map the port so that we can access
+	dockers contents locally.
+	if we give network driver as none then the container will not have internet access to it
+	"docker network create -d bridge aniket" this is the command by this we can make our own custom network drivers
+	if we run to containers on the same network driver they can communicate with each other.
+
+Volume Mounting:-
+	let us suppose we have created a container of ubuntu and in that container we did our task we made new files and if we delete the container
+	then what happens is the data that we put inside it also goes away so for that volume mounting is used we mount our own machines files inside the container
+	so that if the container is deleted then also we have the files in our local machine that is volume mounting.
+Commands:-
+	"docker run -it -v /home/anni/Desktop/dockertest:/home/abc ubuntu" in this command we have mounted our dockertest folder to the abc folder of the ubuntu 
+	machine so for that -v flag is used it is for volume mounting.
+	the abc folder is not required to exist on the container we can give name as per our need it will be created automatically inside the container.
+	we can also make our custom volumes so that we dont have to always mount our folder to the container for that the commands are.
+	"docker volume create <volume name>" so this will create a volume for us.
+	"docker volume ls" this will list the volumes.
+	"docker volume inspect <volume name>" this command will show the details of the volume.
+	"docker volume rm <volume name>" this command is to delete the volume.
+	Starting a container with a volume:
+		if we start a container with a volume that dosent exist, Docker creates the volume for us. the following examples mounts the volume "myvol into
+		/app in the container.
+		
+		The -v and --mount examples below produces the same result.
+		Command :-
+			docker run -d \
+			--name devtest \
+			--mount source=myvol,target=/app\
+			nginx:latest
+		Use docker inspect volume to verify that Docker created the volume and it mounted correctly.
+		Look for the "Mounts" section.
+
+Caching the layers:-
+	This is a concept which is used for building the container so what happens is if we already built a container then if we built it again then it
+	takes less time to build again it is because the layers are already cached so it bilts quickly and then for that the "Dockerfile" should be written in a proper 	manner so that the caching happens efficiently.
+
+Docker Multi-Stage Build:-
+	it is basically we can install all the essentials in one container and another container will run it that is multi stage builds 
+	refrence:- /home/anni/Desktop/Dockerfile.
+	in that file is the example of multistage build.
+
+Deployment of Image on the Cloud(AWS):-
+	
+	
