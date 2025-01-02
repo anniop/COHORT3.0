@@ -12,7 +12,7 @@ export default async function User() {
                 <div>
                     Name: {data?.name}
                 </div>
-                
+                  Jay Ganesh             
                 {data?.email}
             </div>
         </div>
