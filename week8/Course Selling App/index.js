@@ -14,7 +14,7 @@ app.use("/api/v1/course", courseRouter);
 app.use(express.json())
 
 async function main() {
-  await mongoose.connect(process.env.MONGO_URL);
+  await mongoose.connect(process.env.MONGO_URL)
 
   app.listen(3000, () => {
     console.log("The Server Started On Port No :- 3000 JAY GANESH")
